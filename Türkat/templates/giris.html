@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÜRKAT</title>
+    <link rel="stylesheet" href="{% static 'form.css' %}">
+</head>
+<body>
+    <div class="login">
+        <form method="POST">
+            <div class="container">
+                <h1>Hoş Geldiniz</h1>
+                <button id="toggleBtn" type="button" style="inline-size: 30px; left: 280px; bottom: 80px; background: rgb(183, 9, 9);"></button>
+                {% csrf_token %}
+                {{form}}
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            <div class="btn">
+                <button type="submit" class="button" style="inline-size: 318px; right: 32px; top: 12px;">Giriş yap</button>
+            </div>
+            <div class="container-kayıt">
+                <p>Kayıt olmak için => <a href="{% url 'register' %}">Kayıt ol</a></p>
+            </div>
+        </form> 
+    </div> 
+</body>
+<script>
+    // Başlangıçta arka plan beyaz
+    let isBlack = false;
+
+    // Butona tıklanma olayı
+    document.getElementById("toggleBtn").addEventListener("click", function() {
+        if (isBlack) {
+            // Arka planı beyaz yap
+            document.body.style.backgroundColor = "white";
+        } else {
+            // Arka planı siyah yap
+            document.body.style.backgroundColor = "rgb(60, 2, 2)";
+        }
+        // Renk durumunu değiştir
+        isBlack = !isBlack;
+    });
+</script>
+</html>

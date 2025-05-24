@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kullanıcı</title>
+    <link rel="stylesheet" href="{% static 'room.css' %}">
+</head>
+<body>
+    <div class="sidebar">
+            <div class="container">
+                <div class="user-room"><h1> <a href="{% url 'global_chat' %}" style="color: red;">Sohbet</a> </h1></div>
+                {% for user in users %}
+                    <div class="user-room"><h1> <a style="text-decoration: none; color: black;" href="{% url 'start_chat' user %}">{{user}}</a> </h1></div>
+                {% endfor %}
+            </div>
+    </div>
+    <div class="login">
+        <div class="container">
+
+        </div>
+    </div>
+</body>
+</html>

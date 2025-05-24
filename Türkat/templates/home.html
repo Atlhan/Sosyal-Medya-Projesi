@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user}}</title>
+    <link rel="stylesheet" href="{% static 'a.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <div class="Logo-wrapper">
+                <h1 class="logo">TÜRKAT</h1>
+            </div>
+            <div class="menü-container">
+                <ul class="menü-list">
+                    <li class="menu-list-item">Ana Sayfa</li>
+                    <li class="menu-list-item">Arama</li>
+                    <li class="menu-list-item">Keşfet</li>
+                    <li class="menu-list-item">Video</li>
+                    <li class="menu-list-item"><a href="{% url 'profil' %}" style="color: red;">Hesabım</a></li>
+                </ul>
+            </div>
+            <div class="message">
+                    <a href="{% url 'global_chat' %}" style="color: red;">Mesaj</a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar"><h1>Menü</h1></div>
+    <div class="Post-image">
+        <h1>Post</h1>
+    </div>
+    <div class="kullanıcı">
+        <h1>Kullanıcılar</h1>
+    </div>
+</body>
+</html>

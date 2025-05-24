@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user}} Profil</title>
+    <link rel="stylesheet" href="{% static 'profil.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>{{user}}</h1>
+        </div>
+        <div class="liste">
+            <div>
+                <p>Gönderi</p>
+                <p style="padding-left: 24px;">1</p>
+            </div>
+            <div>
+                <p>Takipçi</p>
+                <p style="padding-left: 22px;">1</p>
+            </div>
+            <div>
+                <p>Takip</p>
+                <p style="padding-left: 16px;">1</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

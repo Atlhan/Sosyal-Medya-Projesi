@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    color: rgb(255, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0; /* Genişliğin doğru hesaplanması için */
+    width: 100%; /* Tüm sayfa genişliğini kaplaması için */
+
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo {
+    font-size: 30px;
+    color: rgb(red, green, blue);
+}
+
+.menü-list {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+}
+
+.menu-list-item {
+    cursor: pointer;
+}
+
+.menu-list-item:hover {
+    font-weight: bold;
+    color: brown;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    padding-top: 60px;
+}
+
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    color: aquamarine;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 220px;
+    flex-shrink: 0;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.Post-image {
+    background-color: rgb(255, 255, 255);
+    height: 100%; /* Kullanılabilir dikey alanı doldurur */
+    width: 100%;
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.kullanıcı {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 100%;
+    border: 1px solid rgb(255, 0, 0);
+}

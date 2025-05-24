@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background: rgb(255, 255, 255);
+    height: 600px;
+    width: 500px;
+    padding: 20px;
+    border: 1px solid rgb(183, 9, 9);
+}
+
+.box {
+    background: white;
+    text-align: center;
+    border: 1px solid rgb(183, 9, 9);
+}
+
+.liste {
+    display: flex;
+    column-gap: 40px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 20px; /* Üst, sağ, alt, sol padding'i 20px yapar */
+        justify-content: center; /* .container'ı body içinde yatayda ortalar */
+        /* display: flex; zaten body'de tanımlı olduğu için burada tekrar belirtmeye gerek yok */
+    }
+
+    .container {
+        width: 90%; /* Ekran genişliğinin %90'ını kaplar */
+        height: 90%; /* Ekran yüksekliğinin %90'ını kaplar
+        /* height: 600px; /* Yükseklik sabit kalır, isterseniz auto yapabilirsiniz: height: auto; */
+        /* position: relative; ve background: red; zaten .container'da tanımlı */
+    }
+}

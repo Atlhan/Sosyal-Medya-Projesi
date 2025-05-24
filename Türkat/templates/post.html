@@ -1,0 +1,15 @@
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+        {% for post in posts %}
+            <div>
+                <img src="{% post.image.url %}" alt="">
+                <p class="post.text">{{post.description}}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
